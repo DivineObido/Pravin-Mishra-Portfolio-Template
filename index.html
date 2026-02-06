@@ -602,14 +602,23 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
 	<p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        <p>Pravin Mishra Portfolio v1.0 — Deployed on <DD Mon YYYY> — By Divine Obido</p>	
+        <p>Pravin Mishra Portfolio v1.0 — Deployed on <span id="deployDate"></span> — By Divine Obido</p>	
       </div>
 
     </div>
   </footer>
 
-
-
+  <script>
+    // Get today's date
+    const today = new Date();
+    
+    // Format as DD Mon YYYY (e.g., "07 Feb 2026")
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    const formattedDate = today.toLocaleDateString('en-GB', options);
+    
+    // Set the date in the span
+    document.getElementById('deployDate').textContent = formattedDate;
+</script>
 </body>
 
 
