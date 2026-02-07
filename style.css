@@ -1039,7 +1039,14 @@ section {
 .footer {
   background: #000;
   color: #fff;
-  padding: 80px 20px 40px;
+  padding: 40px 20px; /* Increased padding for better spacing */
+  font-size: 16px; /* Readable font size */
+  line-height: 1.6; /* Better readability */
+}
+
+.footer p {
+    color: #e0e0e0; /* Slightly lighter for better contrast */
+    margin: 10px 0; /* Better vertical spacing */
 }
 
 .footer-container {
@@ -1068,9 +1075,9 @@ section {
 
 /* Socials */
 .footer-socials {
-  margin-top: 20px;
+  margin: 20px 0;
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Space between icons */
 }
 
 .footer-socials a {
@@ -1108,12 +1115,14 @@ section {
 
 .footer ul a {
   text-decoration: none;
-  color: #aaa;
+  /* color: #aaa; */
+  color: #87ceeb; /* Light blue for links */
   transition: 0.3s;
 }
 
 .footer ul a:hover {
-  color: #facc15;
+  color: #ffa500; /* Orange on hover */
+  text-decoration: underline;
 }
 
 /* Bottom */
@@ -1132,8 +1141,23 @@ section {
   color: #facc15;
 }
 
+/* Deploy date styling */
+#deployDate {
+    color: #ffa500; /* Orange color for emphasis */
+    font-weight: 600; /* Make it stand out */
+}
+
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .footer {
+      padding: 30px 15px;
+      font-size: 14px;
+      text-align: center;
+  }
+    
+  .footer-socials {
+    justify-content: center;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
@@ -1143,3 +1167,4 @@ section {
     text-align: center;
   }
 }
+
